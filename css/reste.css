@@ -1,0 +1,154 @@
+/* CSS TRANSITION QUI SERT PEUT ÊTRE À RIEN */
+
+/* LES MEDIAS */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cd-cover-layer {
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cd-loading-bar {
+    width: calc(100% - 40px);
+  }
+}
+/* LE MAIN */
+main .cd-main-content {
+  position: relative;
+  height: calc(100vh - 20px);
+}
+main .cd-main-content > div {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+main .cd-main-content::after, main .cd-main-content::before {
+  /* these are the 2 gradient overlay at the top and bottom of the .cd-main-content - to indicate that you can scroll */
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}
+
+main {
+  text-align: center;
+}
+main .cd-main-content::before {
+  top: 0;
+}
+main .cd-main-content::after {
+  bottom: 0;
+}
+main .cd-main-content.cd-index {
+  background-color: #4089a6;
+  display: table;
+  width: 100%;
+}
+main .cd-main-content.cd-index > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+main .cd-main-content.cd-index::after {
+  background-color: rgba(64, 137, 166, 0);
+  background-image: -webkit-linear-gradient(bottom, #4089a6, rgba(64, 137, 166, 0));
+  background-image: linear-gradient(to top,#4089a6, rgba(64, 137, 166, 0));
+}
+main .cd-main-content.cd-index::before {
+  background-color: rgba(64, 137, 166, 0);
+  background-image: -webkit-linear-gradient(top, #4089a6, rgba(64, 137, 166, 0));
+  background-image: linear-gradient(to bottom,#4089a6, rgba(64, 137, 166, 0));
+}
+main .cd-main-content.cd-about {
+  background-color: #283040;
+}
+main .cd-main-content.cd-about > div {
+  padding-top: 50px;
+}
+main .cd-main-content.cd-about::after {
+  background-color: rgba(40, 48, 64, 0);
+  background-image: -webkit-linear-gradient(bottom, #283040, rgba(40, 48, 64, 0));
+  background-image: linear-gradient(to top,#283040, rgba(40, 48, 64, 0));
+}
+main .cd-main-content.cd-about::before {
+  background-color: rgba(40, 48, 64, 0);
+  background-image: -webkit-linear-gradient(top, #283040, rgba(40, 48, 64, 0));
+  background-image: linear-gradient(to bottom,#283040, rgba(40, 48, 64, 0));
+}
+
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 20px;
+  }
+  main .cd-main-content {
+    height: calc(100vh - 40px);
+  }
+  main.cd-index > div {
+    padding-top: 200px;
+  }
+  main.cd-index > div {
+    padding-top: 50px;
+  }
+  main p {
+    font-size: 1.8rem;
+    line-height: 2;
+  }
+}
+
+.cd-cover-layer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #4089a6;
+  -webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+  -moz-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+  transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+}
+/* HTML GENERAL */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-image: url('imgcss/fontindex.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: #283040;
+  text-decoration: none;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 1em;
+  font-size: 2.2rem;
+}
+span{
+  color: #FF8F00;
+  font-size: 2.1rem;
+}
